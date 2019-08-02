@@ -244,10 +244,24 @@
   <configuration
     Name="Release"
     c_preprocessor_definitions="NDEBUG"
-    gcc_optimization_level="Optimize For Size" />
+    gcc_optimization_level="Optimize For Size"
+    hidden="Yes" />
   <configuration
     Name="Debug"
     c_preprocessor_definitions="DEBUG; DEBUG_NRF; RUUVI_RUN_TESTS"
-    gcc_optimization_level="None" />
+    gcc_optimization_level="None"
+    hidden="Yes" />
   <configuration Name="Longlife" />
+  <configuration
+    Name="Debug Internal"
+    inherited_configurations="Internal;Debug" />
+  <configuration
+    Name="Release Internal"
+    inherited_configurations="Internal;Release" />
+  <configuration
+    Name="Debug External"
+    inherited_configurations="External GNU" />
+  <configuration
+    Name="Release External"
+    inherited_configurations="External GNU" />
 </solution>
